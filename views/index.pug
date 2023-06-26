@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Home Page
+  body
+    h1 Home Page
+    if categories.length > 0
+      ul
+        each category in categories
+          li
+            a(href=`/category/${category.slug}`) #{category.name}
+    else
+      p No categories found.

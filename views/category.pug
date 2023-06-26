@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		title #{category} 
+	body
+		h1 #{category}
+		if products.length > 0
+			ul
+				each product in products
+					li #{product.name} - Price: #{product.price}
+		else
+			p No products found in this category.
