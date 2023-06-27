@@ -7,6 +7,9 @@ html
 		if products.length > 0
 			ul
 				each product in products
-					li #{product.name} - Price: #{product.price}
+					li
+						a(href=`/${product.slug}`) #{product.name} - Price: #{product.price}
 		else
 			p No products found in this category.
+	footer
+		a(href=`/`) Home
